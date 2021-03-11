@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jump</title>
+  </head>
+  
+  <script type="text/javascript">
+    
+    window.onload = function(){
+      document.getElementById('btn').onclick = function(){
+        left = document.getElementById("left").value;
+        right = document.getElementById("right").value;
+        if(left != " "){
+          document.getElementById("right").value = left;
+          document.getElementById("left").value = " ";
+        } else if(right != " "){
+          document.getElementById("left").value = right;
+          document.getElementById("right").value = " ";
+        }
+        change();
+      };
+
+    }
+    
+    function change(){
+      var btn_text = document.getElementById("btn");
+      if (btn_text.value == "<JUMP") btn_text.value = "JUMP>";
+        else btn_text.value = "<JUMP";
+    }
+    
+  </script> 
+  
+  
+  
+  
+  <body>
+    
+    <input type="text" name="left" id="left" value=" ">
+    <input type="button" name="button" value="JUMP>" id="btn">
+    <input type="text" name="right" id="right" value=" ">
+  </body>
+</html>
